@@ -1,0 +1,51 @@
+<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+<div class="container">
+
+  <div class="form_container">
+    <div class="title not-selectable">Add Coupon</div>
+
+    <form autocomplete="on">
+      <fieldset>
+        <input type="text" placeholder="Coupon name" name="name" [(ngModel)]="coupon.title">
+        <div class="after"></div>
+      </fieldset>
+      <fieldset>
+          <input type="text" placeholder="Coupon description" name="description" [(ngModel)]="coupon.description">
+          <div class="after"></div>
+        </fieldset>
+        <fieldset>
+          <input type="text" placeholder="Coupon Category" name="category" [(ngModel)]="coupon.category">
+          <div class="after"></div>
+        </fieldset>
+      <fieldset>
+        <input type="date" placeholder="Start date" name="startDate" [(ngModel)]="coupon.startDate">
+
+        <div class="after"></div>
+      </fieldset>
+      <fieldset>
+        <input type="date" placeholder="End date" name="endDate" [(ngModel)]="coupon.endDate">
+
+        <div class="after"></div>
+      </fieldset>
+      <fieldset>
+        <input type="number" placeholder="Coupon stock" name="amount" [(ngModel)]="coupon.amount">
+        <div class="after"></div>
+      </fieldset>
+      <fieldset>
+        <input type="text" placeholder="Coupon image url" name="image" [(ngModel)]="coupon.image">
+        <div class="after"></div>
+      </fieldset>
+      <fieldset>
+        <input type="number" placeholder="Coupon price" name="price" [(ngModel)]="coupon.price">
+        <div class="after"></div>
+      </fieldset>
+
+
+
+        <button type="submit" (click)="addCompany()">Submit</button>
+        <a class="home" routerLink="/company">Home</a>
+    </form>
+
+  </div>
+
+</div>

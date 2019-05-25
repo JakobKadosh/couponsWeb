@@ -1,0 +1,29 @@
+<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+<div class="container">
+
+  <div class="form_container">
+    <div class="title not-selectable">Add Company</div>
+
+    <form autocomplete="on">
+      <fieldset>
+        <input type="text" placeholder="Company Name" name="name" [(ngModel)]="company.name">
+        <div class="after"></div>
+      </fieldset>
+      <fieldset>
+          <input type="text" placeholder="Company email" name="email" [(ngModel)]="company.email">
+          <div class="after"></div>
+        </fieldset>
+      <fieldset>
+        <input type="password" placeholder="Password" name="password" [(ngModel)]="company.password">
+
+        <div class="after"></div>
+    
+        <button type="submit" (click)="addCompany()">Submit</button>
+        <a class="home" routerLink="/admin">Home</a>
+      </fieldset>
+     
+    </form>
+
+  </div>
+
+</div>

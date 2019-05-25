@@ -1,0 +1,37 @@
+<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+<div class="container">
+
+  <div class="form_container">
+    <div class="title not-selectable">All Customers: </div>
+    <table class="theTable">
+      <tr>
+        <th> NO: </th>
+        <th> Coupon No: </th>
+        <th> Customer No: </th>
+        <th> Amount: </th>
+        <th> Delete purchase</th>
+      </tr>
+      <tr *ngFor="let p of data.all_purchases">
+        <td>
+          {{p.purchase_id}}
+        </td>
+        <td>
+          {{p.coupon_id}}
+        </td>
+        <td>
+          {{p.customer_id}}
+        </td>
+        <td>
+          {{p.amount}}
+        </td>
+       
+
+        <td>
+          <button (click)="deletePurchase(p.purchase_id)">Delete. (Irriversible)</button>
+        </td> 
+      </tr>
+    </table>
+    <a routerLink="/admin" style="color:white">Back</a>
+  </div>
+
+</div>

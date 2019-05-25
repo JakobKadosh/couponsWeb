@@ -1,0 +1,33 @@
+<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+<div class="container">
+
+  <div class="form_container">
+    <div class="title not-selectable">All companies: </div>
+    <table class="theTable">
+      <tr>
+        <th> NO: </th>
+        <th> Name: </th>
+        <th> Email: </th>
+        <th> Delete company: </th>
+      </tr>
+      <tr *ngFor="let p of data.all_companies">
+        <td >
+          {{p.id}} 
+        </td>
+        <td>
+          {{p.name}}
+        </td>
+        <td>
+          {{p.email}}
+        </td>
+        <td>
+          <button (click)="deleteCompany(p.id)">Delete (Irreversible)</button>
+        </td>
+        
+      </tr>
+    </table>
+    <a routerLink="/admin" style="color:white">Back</a>
+
+  </div>
+
+</div>

@@ -1,0 +1,43 @@
+<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+<div class="container">
+
+     <div class="form_container">
+          <div class="title not-selectable">Sign up</div>
+
+          <form autocomplete="on">
+               <fieldset>
+                    <input type="text" name="_firstName" placeholder="First name" [(ngModel)]="_firstName">
+
+
+                    <div class="after"></div>
+               </fieldset>
+               <fieldset>
+                    <input type="text" name="_lastName" placeholder="Last name" [(ngModel)]="_lastName">
+
+                    <div class="after"></div>
+               </fieldset>
+               <fieldset>
+                    <input type="email" name="_email" placeholder="Email" [(ngModel)]="_email">
+
+                    <div class="after"></div>
+               </fieldset>
+               <fieldset>
+                    <input type="password" name="_password" placeholder="Password" [(ngModel)]="_password">
+
+                    <div class="after"></div>
+               </fieldset>
+               <fieldset>
+                    <input type="password" name="_confirm" placeholder="Renter Password" [(ngModel)]="_confirm">
+
+                    <div class="after"></div>
+               </fieldset>
+
+               <fieldset>
+                    <button (click)="register()">Register</button>
+                    <a class="homeLink" routerLink="/users/login">Back to home page</a>
+               </fieldset>
+          </form>
+
+     </div>
+
+</div>

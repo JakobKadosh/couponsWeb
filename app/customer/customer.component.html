@@ -1,0 +1,54 @@
+<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+<div class="container">
+
+  <div class="form_container">
+    <div class="title not-selectable">Hi customer! </div>
+    <table class="theTable">
+      <tr>
+        <th>Title: </th>
+        <th>Category: </th>
+        <th>Description: </th>
+        <th>Start Date: </th>
+        <th>End Date: </th>
+        <th>Stock: </th>
+        <th>Image: </th>
+        <th>Price: </th>
+        <th>Amount: </th>
+      </tr>
+      <tr *ngFor="let p of coupons.allCoupons">
+        <td>
+          {{p.title}}
+        </td>
+        <td>
+          {{p.category}}
+        </td>
+        <td>
+          {{p.description}}
+        </td>
+        <td>
+          {{p.start_date}}
+        </td>
+        <td>
+          {{p.end_date}}
+        </td>
+        <td>
+          {{p.amount}}
+        </td>
+        <td>
+          <a href="{{p.image}}" >Click for an image</a>
+        </td>
+        <td>
+          {{p.price}}
+        </td>
+        <td><input type="number" [(ngModel)]="amount" style="font-size:12pt;width: 35px;color:white;"></td>
+        <td>
+          <button (click)="purchase(p.id)" style="cursor: pointer;">Purchase</button>
+        </td>
+
+      </tr>
+    </table>
+
+    
+  </div>
+
+</div>
